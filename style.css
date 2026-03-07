@@ -1,0 +1,247 @@
+:root{
+    --nero:#020202;
+    --ardesia:#0e0e0f;
+    --ottone:#c5a059;
+    --grigio:#333;
+    --testo:#d8d8d8;
+    
+    --fontTitolo:'Cormorant Garamond',serif;
+    --fontBase:'Montserrat',sans-serif;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior: smooth; 
+}
+
+body{
+
+background:var(--nero);
+color:var(--testo);
+font-family:var(--fontBase);
+line-height:1.8;
+
+}
+
+.grana-superficie{
+    position:fixed;
+    width:100%;
+    height:100%;
+    background:url("https://www.transparenttextures.com/patterns/black-linen.png");
+    opacity:0.15;
+    pointer-events:none;
+}
+
+.barra-navigazione{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:30px 60px;
+
+    position:fixed;
+    width:100%;
+
+    background:linear-gradient(to bottom,var(--nero),transparent);
+
+    z-index:1000;
+}
+
+.logo-atelier{
+    font-family:var(--fontTitolo);
+    letter-spacing:8px;
+    color:var(--ottone);
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:30px;
+    font-size:12px;
+    letter-spacing:3px;
+    opacity:0.6;
+}
+
+nav a:hover{
+    color:var(--ottone);
+    opacity:1;
+}
+
+.cta-oro{
+    border:1px solid var(--ottone);
+    padding:8px 14px;
+    color:var(--ottone);
+}
+
+.sezione-hero{
+    height:100vh;
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.immagine-sfondo{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    filter:grayscale(1) brightness(.4);
+}
+
+.overlay-nero{
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:radial-gradient(circle,transparent,var(--nero));
+}
+
+.contenuto-hero{
+    position:absolute;
+    text-align:center;
+}
+
+.titolo-monumentale{
+    font-family:var(--fontTitolo);
+    font-size:8rem;
+    letter-spacing:30px;
+}
+
+.tagline{
+    color:var(--ottone);
+    letter-spacing:8px;
+}
+
+.sezione-testo-pieno{
+    padding:200px 10%;
+}
+
+.container-centrale{
+    max-width:800px;
+    margin:auto;
+}
+
+.numero-sezione{
+    color:var(--ottone);
+    letter-spacing:5px;
+}
+
+h2{
+    font-family:var(--fontTitolo);
+    font-size:4rem;
+    margin:40px 0;
+}
+
+.sezione-studio{
+    padding:200px 10%;
+    background:var(--ardesia);
+}
+
+.studio-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:80px;
+    align-items:center;
+}
+
+.studio-immagine img{
+    width:100%;
+    height:600px;
+    object-fit:cover;
+    filter:grayscale(1);
+}
+
+.sezione-processo{
+    padding:200px 10%;
+}
+
+.griglia-processo{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:40px;
+    margin-top:80px;
+}
+
+.step h4{
+    color:var(--ottone);
+    margin-bottom:15px;
+}
+
+.sezione-progetti{
+    padding:200px 10%;
+    background:var(--ardesia);
+}
+
+.griglia-progetti{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:40px;
+    margin-top:80px;
+}
+
+.progetto img{
+    width:100%;
+    height:300px;
+    object-fit:cover;
+    filter:grayscale(1);
+    transition:0.6s
+}
+
+.progetto:hover img{
+    filter:grayscale(0);
+    transform:scale(1.05);
+}
+
+.sezione-numeri{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    padding:150px 10%;
+    text-align:center;
+}
+
+.numero-box h3{
+    font-size:4rem;
+    color:var(--ottone);
+    font-family:var(--fontTitolo);
+}
+
+.sezione-futuro{
+    padding:200px 10%;
+    text-align:center;
+}
+
+.sezione-chiusura{
+    padding:200px 10%;
+}
+
+.box-contatto{
+    border:1px solid var(--ottone);
+    padding:100px;
+    text-align:center;
+}
+
+.btn-titanico{
+    display:inline-block;
+    margin-top:40px;
+    padding:20px 50px;
+
+    border:1px solid var(--ottone);
+    color:var(--ottone);
+    text-decoration:none;
+    letter-spacing:4px;
+}
+
+.btn-titanico:hover{
+    background:var(--ottone);
+    color:black;
+}
+
+.footer-nero{
+    padding:60px;
+    text-align:center;
+    opacity:.4;
+}
