@@ -112,8 +112,8 @@ nav a:hover{
 
 .titolo-monumentale{
     font-family:var(--fontTitolo);
-    font-size:8rem;
-    letter-spacing:30px;
+    font-size: clamp(3rem, 12vw, 8rem);
+    letter-spacing: clamp(5px, 4vw, 30px);
 }
 
 .tagline{
@@ -137,7 +137,7 @@ nav a:hover{
 
 h2{
     font-family:var(--fontTitolo);
-    font-size:4rem;
+    font-size: clamp(2rem, 8vw, 4rem);
     margin:40px 0;
 }
 
@@ -303,13 +303,17 @@ h2{
     box-shadow: var(--ombra);
 }
 
+.box-contatto h2 {
+    font-size: clamp(2.5rem, 6vw, 3.5rem);
+}
+
 .box-contatto p{
     margin-inline: auto;
 }
 
 .btn-titanico{
-    display:inline-block;
-    margin-top:40px;
+    display:block;
+    margin:40px auto 0;
     padding:20px 50px;
 
     border:1px solid var(--ottone);
@@ -327,4 +331,113 @@ h2{
     padding:60px;
     text-align:center;
     opacity:.4;
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+
+@media (max-width: 1180px) {
+    .griglia-processo {
+        grid-template-columns: repeat(2, minmax(210px, 1fr));
+    }
+
+    .griglia-progetti {
+        grid-template-columns: repeat(2, minmax(220px, 1fr));
+    }
+}
+
+@media (max-width: 860px) {
+    .barra-navigazione {
+        padding: 18px 5%;
+        align-items: flex-start;
+    }
+
+    .logo-atelier {
+        letter-spacing: 0.15rem;
+        font-size: 0.8rem;
+        margin-top: 4px;
+    }
+
+    nav a {
+        margin-left: 12px;
+        font-size: 0.6rem;
+        letter-spacing: 0.12rem;
+    }
+
+    .tagline {
+        letter-spacing: 0.18rem;
+        font-size: 0.68rem;
+    }
+
+    .sezione-testo-pieno,
+    .sezione-studio,
+    .sezione-processo,
+    .sezione-progetti,
+    .sezione-futuro,
+    .sezione-chiusura {
+        padding: 108px 6%;
+    }
+
+    .studio-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .studio-immagine img {
+        height: 420px;
+    }
+
+    .sezione-numeri {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 560px) {
+    .barra-navigazione {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        padding: 10px 5%;
+    }
+
+    nav {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    nav a {
+        margin-left: 0;
+        margin-right: 12px;
+    }
+
+    .contenuto-hero {
+        padding-top: 84px;
+    }
+
+    .griglia-processo,
+    .griglia-progetti,
+    .sezione-numeri {
+        grid-template-columns: 1fr;
+    }
+
+    .step,
+    .numero-box {
+        padding: 24px 18px;
+    }
+
+    .studio-immagine img,
+    .progetto img {
+        height: 240px;
+    }
+    
+    .footer-nero {
+        padding: 30px 10px;
+        white-space: normal;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        scroll-behavior: auto !important;
+        transition: none !important;
+    }
 }
